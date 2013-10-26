@@ -13,6 +13,12 @@ footer {
   text-align: center;
 }
 
+.app-disclaimer {
+  padding: 9px 10px;
+  margin-bottom: 36px;
+  background: #f0e68c;
+}
+
 .talk-slides-link {
   display: inline-block;
   color: white;
