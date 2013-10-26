@@ -41,7 +41,7 @@ end
 # mi aspetto un title del tipo "Introduzione-al-Linux-Day"
 
 get '/talks/:title' do
-  title = params[:title].gsub('-',' ')
+  title = params[:title].gsub('_',' ')
   @talk = settings.talks.select { |talk| talk[:title] == title }.first
   erb :talk
 end

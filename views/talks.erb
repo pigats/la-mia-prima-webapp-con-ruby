@@ -19,7 +19,7 @@
         <li> 
           <%= talk[:time] %>
           -
-          <a href="<%= url('/talks/' + talk[:title].gsub(' ','-'))%>">
+          <a href="<%= url('/talks/' + talk[:title].gsub(' ','_'))%>">
             <%= talk[:title] %>
           </a>
           <% unless talk[:speaker].nil? %>
