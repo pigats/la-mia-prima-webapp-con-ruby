@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linuxday 2013 - Padova</title>
+    <%= erb :_head %>
+  </head>
+  <body>
+    <h2>Linuxday 2013 - Padova</h2>
+    <h1>Questo è l'elenco dei talk:</h1>
+    <ul>
+      <% @talks.each do |talk| %>
+        <li> 
+          <%= talk[:time] %>
+          -
+          <a href="<%= url('/talks/' + talk[:title].gsub(' ','-'))%>">
+            <%= talk[:title] %>
+          </a>
+          <% unless talk[:speaker].nil? %>
+            <i>di <%= talk[:speaker] %></i>  
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    <div>
+      <img src="/images/marco-tux.png" alt="marco tux" />
+      <p>
+        Grazie a Marco e a tutto il team FSUG Padova per aver organizzato questa splendida giornata
+      </p>
+    <%= erb :_credits %>
+  </body>
+</html>

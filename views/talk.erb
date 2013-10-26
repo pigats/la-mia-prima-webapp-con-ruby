@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Linuxday 2013 - Padova; Talk details</title>
+    <%= erb :_head %>
+  </head>
+  <body>
+    <h2>Linuxday 2013 - Padova</h2>
+    <h1>Talk: <%= @talk[:title] %></h1>
+    <% if !@talk[:speaker].nil? %>
+      <p> 
+        di <%= @talk[:speaker] %>
+      </p>
+    <% end %>
+    <p>
+      <% unless @talk[:file].nil? %>
+        <a href="<%= '/files/' + @talk[:file] %>" target="_blank" class="talk-slides-link">Scarica le slide &downarrow;</a>
+      <% else %>
+        Le slide del talk non sono ancora disponibili
+      <% end %>
+    <p class="talk-back-link">
+      <a href="<%= url('/') %>">&leftarrow; torna alla lista dei talk</a>
+    </p>
+    <%= erb :_credits %>
+
+  </body>
+</html>

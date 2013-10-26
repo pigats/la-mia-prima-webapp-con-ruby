@@ -1,0 +1,27 @@
+body {
+  width: 960px;
+  margin: 18px auto;
+  font-size: 12pt/1.1;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+}
+
+footer {
+  font-size: 9pt;
+  text-align: center;
+}
+
+.talk-slides-link {
+  display: inline-block;
+  color: white;
+  padding: 9px 10px;
+  background-color: green;
+  text-decoration: none;
+}
+
+.talk-back-link {
+  margin-top: 36px;
+}
+
