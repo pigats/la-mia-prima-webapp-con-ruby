@@ -38,7 +38,7 @@ get '/' do
   erb :talks
 end
 
-# mi aspetto un title del tipo "Introduzione-al-Linux-Day"
+# mi aspetto un title del tipo "Introduzione_al_Linux_Day"
 
 get '/talks/:title' do
   title = params[:title].gsub('_',' ')
